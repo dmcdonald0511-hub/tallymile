@@ -1,0 +1,78 @@
+:root {
+  --ink: #201a15;
+  --ink-soft: #5c5147;
+  --paper: #faf7f2;
+  --paper-raised: #ffffff;
+  --line: #e4dcd0;
+  --accent: #c2410c;
+  --accent-soft: #fdece0;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f2ede4;
+    --ink-soft: #b8ada0;
+    --paper: #1a1613;
+    --paper-raised: #241f1a;
+    --line: #3a322a;
+    --accent: #ff8a4c;
+    --accent-soft: #3a2318;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 40px 16px 56px;
+}
+.wrap { max-width: 680px; margin: 0 auto; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+header img { width: 56px; height: 56px; border-radius: 13px; }
+header .brand { font-weight: 800; font-size: 1.1rem; }
+header nav { margin-left: auto; display: flex; gap: 16px; font-size: 0.95rem; }
+a { color: var(--accent); font-weight: 600; text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 2rem; line-height: 1.2; letter-spacing: -0.01em; margin: 0 0 6px; }
+.meta { color: var(--ink-soft); font-size: 0.9rem; margin: 0 0 28px; }
+h2 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin: 36px 0 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+p { margin: 0 0 14px; }
+ul { margin: 0 0 14px; padding-left: 1.3em; }
+li { margin-bottom: 8px; }
+.callout {
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 0 0 8px;
+}
+.table-wrap { overflow-x: auto; margin: 8px 0 14px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--ink-soft); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.contact {
+  background: var(--paper-raised);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-top: 36px;
+}
+footer { color: var(--ink-soft); font-size: 0.85rem; margin-top: 40px; text-align: center; }
+@media (max-width: 480px) {
+  h1 { font-size: 1.6rem; }
+  header nav { gap: 12px; }
+}
